@@ -1,0 +1,60 @@
+<div>
+    <div class="container" style="margin-left:5%;">
+        <h3>Contact Details</h3>
+        <button class="btn btn-primary" go-click="/edit/{{details.FullContact.Id}}">EDIT</button>
+        <button class="btn btn-primary" go-click="/list">HOME</button>
+        <button class="btn btn-danger pull-right" ng-click="details.deleteContact()" >DELETE</button>
+        <br>
+        <table class="table table-hover">
+        <tr>
+            <td>Salutation: </td>
+            <td>{{details.FullContact.Salutation}}</td>
+        </tr>
+		<tr>
+			<td>FirstName: </td>
+            <td>{{details.FullContact.FirstName}}</td>
+		</tr>
+		<tr>
+			<td>LastName: </td>
+            <td>{{details.FullContact.LastName}}</td>
+		</tr>
+		<tr>
+			<td>Email: </td>
+            <td>{{details.FullContact.Email}}</td>
+		</tr>
+		        <tr>
+            <td>Date of birth: </td>
+            <td>{{details.FullContact.Birthdate}}</td>
+        </tr>
+        <tr>
+            <td>Job Title: </td>
+            <td>{{details.FullContact.Title}}</td>
+        </tr>
+        <tr>
+            <td>Department: </td>
+            <td>{{details.FullContact.Department}}</td>
+        </tr>
+        <tr>
+            <td>Lead Source: </td>
+            <td>{{details.FullContact.LeadSource}}</td>
+        </tr>
+
+        <tr>
+			<td>Phone: </td>
+            <td>{{details.FullContact.Phone}}</td>
+		</tr>
+        <tr>
+            <td>Fax: </td>
+            <td>{{details.FullContact.Fax}}</td>
+        </tr>
+        <tr>
+            <td>Mobile Phone Number: </td>
+            <td>{{details.FullContact.MobilePhone}}</td>
+        </tr>
+        <tr>
+            <td>Mailing Address: </td>
+            <td>{{details.FullContact.MailingStreet}}</td>
+        </tr>
+	</table>
+    </div>
+</div>

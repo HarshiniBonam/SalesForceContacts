@@ -1,0 +1,115 @@
+
+<div class="container" style="margin-left:5%;">
+    <h3>Update Contact</h3>
+    <button class="btn btn-primary" go-click="/all">HOME</button>
+    <br>
+	<form name="UpdateForm" ng-submit="UpdateForm.$valid && updater.updateContact()" novalidate>
+    	<table class="table table-hover">
+
+		<tr>
+			<td>Salutation: </td>
+			<td>
+                <select ng-model="updater.CompleteDetails.Salutation">
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Ms.">Ms.</option>
+                </select>
+			</td>
+		</tr>
+		<tr>
+			<td>FirstName:
+				<span style="color:red" ng-show="updater.firstname.$error.required">*</span>
+			</td>
+			<td>
+				<input name="firstname" type="text" ng-model="updater.CompleteDetails.FirstName" required/>
+
+			</td>
+		</tr>
+		<tr>
+			<td>LastName:
+                <span style="color:red" ng-show="updater.lastname.$error.required">*</span>
+            </td>
+			<td>
+				<input name="lastname" type="text" ng-model="updater.CompleteDetails.LastName" required/>
+
+			</td>
+		</tr>
+		<tr>
+			<td>Email:
+                <span style="color:red" ng-show="updater.email.$error.required">*</span>
+            </td>
+			<td>
+				<input name="email" type="email" ng-model="updater.CompleteDetails.Email"/>
+                <span style="color:red" ng-show="UpdateForm.email.$error.email">Invalid email address.</span>
+			</td>
+		</tr>
+		<tr>
+            <td>Date of birth:
+				<span style="color:red" ng-show="updater.email.$error.required">*</span>
+			</td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.Birthdate" required/>
+            </td>
+
+        </tr>
+		<tr>
+			<td>Phone: </td>
+			<td>
+				<input type="text" ng-model="updater.CompleteDetails.Phone"/>
+			</td>
+		</tr>
+        <tr>
+            <td>Job Title: </td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.Title"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Department: </td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.Department"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Lead Source: </td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.LeadSource"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Phone: </td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.Phone"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Fax: </td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.Fax"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Mobile Phone Number: </td>
+            <td>
+                <input type = "text" ng-model = "updater.CompleteDetails.MobilePhone"/>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Mailing Address: </td>
+            <td>
+                <textarea rows="4" type = "textarea" ng-model = "updater.CompleteDetails.MailingStreet"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input class="btn btn-success" type="submit" value="UPDATE"/>
+            </td>
+        </tr>
+	</table>
+    </form>
+</div>

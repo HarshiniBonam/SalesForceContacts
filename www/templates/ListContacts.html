@@ -1,0 +1,23 @@
+<div class = "container" style="margin-left:5%">
+    <button  go-click="/add" class="btn btn-primary">ADD</button>
+    <br>
+   <div>
+       <div  class="list-group row" ng-repeat="contact in lister.list" ng-mouseenter="hover(contact)" ng-mouseleave="hover(contact)" ng-show="contact.show">
+
+           <div class="col-xs-9">
+               <a ng-href="#/details/{{contact.Id}}" class="list-group-item">
+                   {{contact.Name}}
+                   <br>
+                   {{contact.Phone}}
+
+               </a>
+           </div >
+            <div class="col-xs-3">
+                <button class="btn btn-danger" ng-show="contact.showDelete" ng-click="lister.deleteContact(contact)" >DELETE</button>
+            </div>
+       </div>
+   </div>
+
+</div>
+
+
